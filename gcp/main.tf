@@ -8,7 +8,7 @@ terraform {
 }
 
 variable "region" {
-  type = string
+  type    = string
   default = "NORTHAMERICA-NORTHEAST2"
 }
 
