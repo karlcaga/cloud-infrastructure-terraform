@@ -1,10 +1,15 @@
 terraform {
   required_providers {
     google = {
-      source = "hashicorp/google"
+      source  = "hashicorp/google"
       version = "4.51.0"
     }
   }
+}
+
+variable "region" {
+  type = string
+  default = "NORTHAMERICA-NORTHEAST2"
 }
 
 provider "google" {
@@ -85,7 +90,7 @@ resource "random_id" "default" {
 
 resource "google_storage_bucket" "tf_state" {
   name     = "${random_id.default.hex}-terraform-remote-backend"
-  location = "US"
+  location = var.region
 
   force_destroy               = false
   public_access_prevention    = "enforced"
