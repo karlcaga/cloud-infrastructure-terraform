@@ -13,7 +13,7 @@ variable "machine_type" {
 variable "zone" {
   description = "The zone that the GCE instance is created"
   type        = string
-  default     = "NORTHAMERICA-NORTHEAST2"
+  default     = "northamerica-northeast2-a"
 }
 
 variable "network_tier" {
