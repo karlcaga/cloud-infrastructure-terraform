@@ -1,4 +1,3 @@
-# Taken from https://github.com/terraform-google-modules/terraform-google-vm/blob/master/modules/compute_instance/main.tf
 terraform {
   required_providers {
     google = {
